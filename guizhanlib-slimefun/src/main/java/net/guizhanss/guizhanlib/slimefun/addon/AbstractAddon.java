@@ -324,7 +324,7 @@ public abstract class AbstractAddon extends JavaPlugin implements SlimefunAddon 
 
         // Create total tick count
         if (environment == Environment.LIVE) {
-            scheduler.repeat(Slimefun.getTickerTask().getTickRate(), () -> slimefunTickCount++);
+            scheduler.repeatAsync(Slimefun.getTickerTask().getTickRate(), () -> slimefunTickCount++);
         }
 
         // Call enable()
